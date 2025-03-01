@@ -16,7 +16,7 @@ function Navbar() {
     const unactiveNavStyle = { borderBottom: "solid 3px transparent" };
 
     return (
-        <nav className="fixed left-1/2 top-0 flex w-[100vw] -translate-x-1/2 justify-between items-center h-16 shadow-xl py-4 bg-blue-500 text-white font-bold gap-10">
+        <nav className="fixed z-[999] left-0 top-0 flex w-screen justify-between items-center h-18 shadow-md py-4 bg-blue-500 text-white font-bold gap-10">
             <div className="w-[75vw] mx-auto flex justify-between items-center">
                 <div className="logo-wrapper text-2xl w-30 flex justify-center items-center">
                     <a href="/home" className="w-full">Logo</a>
