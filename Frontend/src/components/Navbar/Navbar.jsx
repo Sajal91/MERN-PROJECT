@@ -4,11 +4,11 @@ import { BsCart2 } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
 import "./Navbar.css"
 
-function Navbar() {
+const Navbar = () => {
     const navRoutes = [
         { name: "Home", path: "/home" },
         { name: "About", path: "/about" },
-        { name: "Product", path: "/product" },
+        { name: "Collection", path: "/collection" },
         { name: "Login", path: "/login" }
     ];
 
@@ -17,7 +17,7 @@ function Navbar() {
 
     return (
         <nav className="fixed z-[999] left-0 top-0 flex w-screen justify-between items-center h-18 shadow-md py-4 bg-blue-500 text-white font-bold gap-10">
-            <div className="w-[75vw] mx-auto flex justify-between items-center">
+            <div className="w-[85vw] mx-auto flex justify-between items-center">
                 <div className="logo-wrapper text-2xl w-30 flex justify-center items-center">
                     <a href="/home" className="w-full">Logo</a>
                 </div>
@@ -37,8 +37,11 @@ function Navbar() {
                     <button className="w-6 h-6 flex justify-center items-center cursor-pointer hover:scale-120 transition-all">
                         <IoSearch className="w-full h-full" />
                     </button>
-                    <button className="w-6 h-6 flex justify-center items-center cursor-pointer hover:scale-120 transition-all">
+                    <button className="relative w-6 h-6 flex justify-center items-center cursor-pointer hover:scale-120 transition-all">
                         <BsCart2 className="w-full h-full mb-1" />
+                        <span className="absolute flex justify-center items-center top-0 start-full w-6 h-3 -translate-x-1/2 -translate-y-1/2 bg-black text-white text-[11px] font-semibold rounded-full p-2">
+                            {99}
+                        </span>
                     </button>
                     <button className="w-6 h-6 flex justify-center items-center cursor-pointer hover:scale-120 transition-all">
                         <CgProfile className="w-full h-full" />
