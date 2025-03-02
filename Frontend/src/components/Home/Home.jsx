@@ -1,5 +1,7 @@
 import bannerImg from '../../assets/Images/banner-img.jpg'
 import Card from './Card';
+import Policies from './Policies';
+import Footer from './footer';
 
 const Home = () => {
 
@@ -72,8 +74,14 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+                <div> 
+                    <Policies></Policies> 
+                    <Footer></Footer>
+                   </div> 
+               
             </div>
         </div>
+       
     )
 }
 

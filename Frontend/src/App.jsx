@@ -7,6 +7,7 @@ import Login from './components/Login/Login'
 import Navbar from './components/Navbar/Navbar'
 import Collection from './components/Collections/Collection'
 
+
 function App() {
 
   return (
@@ -19,6 +20,9 @@ function App() {
           <Route path="/collection" element={<Collection />} />
           <Route path="/login" element={<Login />} />
         </Routes>
+        
+       
+               
     </>
   )
 }
