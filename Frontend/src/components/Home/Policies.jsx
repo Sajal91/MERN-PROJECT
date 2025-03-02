@@ -5,7 +5,7 @@ import { FiHeadphones } from "react-icons/fi";
 
 const Policies = () => {
   return (
-     <div className="flex gap-20 items-center ml-20 ">  
+     <div className="flex gap-20 justify-between w-full items-center  ">  
     <div className=" flex flex-col  items-center">
      <div className="w-[20px]" > <RiExchangeFundsLine  /></div>
       <p>Easy Exchange Policy</p>

@@ -11,7 +11,7 @@ const Footer = () => {
        </div>
        
        
-        <div className='flex  justify-between mt-'>
+        <div className='flex  justify-between mt-30'>
         <div  className='w-[350px]'>
          <h1 className='text-4xl font-semibold mb-5 '> Logo </h1>
          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia voluptatum facilis culpa, sed consequatur laborum temporibus repellendus ipsum quo, molestiae similique, optio adipisci. Hic quam reprehenderit facere, dignissimos id provident.</p>
