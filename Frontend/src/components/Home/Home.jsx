@@ -3,12 +3,12 @@ import Card from './Card';
 import Policies from './Policies';
 import Footer from './footer';
 
-function Home() {
+const Home = () => {
 
     return (
         <div className="absolute left-0 top-0 pt-24 w-full h-screen overflow-scroll scroll-smooth flex justify-center">
 
-            <div className="absolute left-1/2 -translate-x-1/2 w-[75vw] ">
+            <div className="absolute left-1/2 -translate-x-1/2 w-[85vw]">
                 <div className="banner-section w-full h-[70vh] flex justify-center border-1 border-black border-solid">
                     <div className="text-area w-1/2 flex justify-center items-center text-4xl">Latest Arrivals</div>
                     <div className="image-area w-1/2">
@@ -19,7 +19,7 @@ function Home() {
                 <div className="collections-section w-full mt-16">
                     <h1 className='text-center text-4xl font-semibold'>Latest Collections</h1>
                     <p className='text-center text-sm tracking-wide mt-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. In magnam dolore fugiat aperiam</p>
-                    <div className="cards-wrapper w-full mt-6 grid grid-cols-5 grid-rows-2 gap-6">
+                    <div className="cards-wrapper w-full mt-16 flex flex-wrap justify-center gap-12">
                         <div className='flex justify-center'>
                             <Card Product_name={"Men Round Neck Pure Cotton T-shirt"} Product_price={10} />
                         </div>
@@ -56,7 +56,7 @@ function Home() {
                 <div className="best-seller-section w-full mt-16">
                     <h1 className='text-center text-4xl font-semibold'>Best Seller</h1>
                     <p className='text-center text-sm tracking-wide mt-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. In magnam dolore fugiat aperiam</p>
-                    <div className="w-full mt-6 grid grid-cols-5 grid-rows-2 gap-6">
+                    <div className="w-full mt-6 flex flex-wrap justify-center gap-12">
                         <div className='flex justify-center'>
                             <Card Product_name={"Men Round Neck Pure Cotton T-shirt"} Product_price={10} />
                         </div>

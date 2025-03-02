@@ -5,6 +5,7 @@ import About from './components/About/About'
 import Product from './components/Product/Product'
 import Login from './components/Login/Login'
 import Navbar from './components/Navbar/Navbar'
+import Collection from './components/Collections/Collection'
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/product" element={<Product />} />
+          <Route path="/collection" element={<Collection />} />
           <Route path="/login" element={<Login />} />
         </Routes>
         
