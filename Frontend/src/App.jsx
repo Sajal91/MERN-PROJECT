@@ -6,6 +6,7 @@ import Product from './components/Product/Product'
 import Login from './components/Login/Login'
 import Navbar from './components/Navbar/Navbar'
 
+
 function App() {
 
   return (
@@ -18,6 +19,9 @@ function App() {
           <Route path="/product" element={<Product />} />
           <Route path="/login" element={<Login />} />
         </Routes>
+        
+       
+               
     </>
   )
 }
