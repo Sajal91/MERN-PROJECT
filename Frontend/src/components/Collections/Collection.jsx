@@ -33,8 +33,8 @@ const Collection = () => {
                         <h1 className="text-4xl">Filters</h1>
                         <div className="filters-box">
                             {
-                                filterArr.map((element)=>{
-                                    return <Filter prop={element}/>
+                                filterArr.map((element, index)=>{
+                                    return <Filter prop={element} key={index}/>
                                 })
                             }
                         </div>

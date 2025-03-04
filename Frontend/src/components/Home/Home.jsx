@@ -1,7 +1,7 @@
 import bannerImg from '../../assets/Images/banner-img.jpg'
 import Card from './Card';
 import Policies from './Policies';
-import Footer from './footer';
+import Footer from '../Footer/Footer';
 
 const Home = () => {
 
@@ -74,14 +74,18 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div> 
-                    <Policies></Policies> 
-                    <Footer></Footer>
-                   </div> 
-               
+
+                <div className='policies-section w-full items-center justify-center mt-28'>
+                    <Policies/>
+                </div>
+
+                <div className='footer-section w-full items-center justify-center mt-28'>
+                    <Footer/>
+                </div>
+
             </div>
         </div>
-       
+
     )
 }
 
