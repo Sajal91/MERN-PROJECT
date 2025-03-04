@@ -10,7 +10,7 @@ main()
 
 async function main() {
     await mongoose.connect(process.env.MONGOURL);
-}
+} 
 
 app.use(express.urlencoded({extended: true}))
 
