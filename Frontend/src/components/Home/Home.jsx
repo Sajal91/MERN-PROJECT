@@ -1,9 +1,32 @@
 import bannerImg from '../../assets/Images/banner-img.jpg'
-import Card from './Card';
+import Card from '../Card/Card';
 import Policies from './Policies';
 import Footer from '../Footer/Footer';
+import { useEffect, useState } from 'react';
 
 const Home = () => {
+    const [latestCollections, setLatestCollections] = useState([])
+    const [isDataLoaded, setIsDataLoaded] = useState(false)
+
+    const getLatestCollections = () => {
+        fetch('http://localhost:8080/latest-products')
+            .then((res) => {
+                res.json()
+                    .then((data) => {
+                        console.log(data)
+                        setLatestCollections([...data])
+                        setIsDataLoaded(true)
+                    }).catch(() => {
+                        setIsDataLoaded(false)
+                    })
+            }).catch(() => {
+                setIsDataLoaded(false)
+            })
+    }
+
+    useEffect(() => {
+        getLatestCollections()
+    }, [])
 
     return (
         <div className="absolute left-0 top-0 pt-24 w-full h-screen overflow-scroll scroll-smooth flex justify-center">
@@ -20,36 +43,13 @@ const Home = () => {
                     <h1 className='text-center text-4xl font-semibold'>Latest Collections</h1>
                     <p className='text-center text-sm tracking-wide mt-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. In magnam dolore fugiat aperiam</p>
                     <div className="cards-wrapper w-full mt-16 flex flex-wrap justify-center gap-12">
-                        <div className='flex justify-center'>
-                            <Card Product_name={"Men Round Neck Pure Cotton T-shirt"} Product_price={10} />
-                        </div>
-                        <div className='flex justify-center'>
-                            <Card Product_name={"Men Round Neck Pure Cotton T-shirt"} Product_price={10} />
-                        </div>
-                        <div className='flex justify-center'>
-                            <Card Product_name={"Men Round Neck Pure Cotton T-shirt"} Product_price={10} />
-                        </div>
-                        <div className='flex justify-center'>
-                            <Card Product_name={"Men Round Neck Pure Cotton T-shirt"} Product_price={10} />
-                        </div>
-                        <div className='flex justify-center'>
-                            <Card Product_name={"Men Round Neck Pure Cotton T-shirt"} Product_price={10} />
-                        </div>
-                        <div className='flex justify-center'>
-                            <Card Product_name={"Men Round Neck Pure Cotton T-shirt"} Product_price={10} />
-                        </div>
-                        <div className='flex justify-center'>
-                            <Card Product_name={"Men Round Neck Pure Cotton T-shirt"} Product_price={10} />
-                        </div>
-                        <div className='flex justify-center'>
-                            <Card Product_name={"Men Round Neck Pure Cotton T-shirt"} Product_price={10} />
-                        </div>
-                        <div className='flex justify-center'>
-                            <Card Product_name={"Men Round Neck Pure Cotton T-shirt"} Product_price={10} />
-                        </div>
-                        <div className='flex justify-center'>
-                            <Card Product_name={"Men Round Neck Pure Cotton T-shirt"} Product_price={10} />
-                        </div>
+                        {
+                            latestCollections.map((element) => {
+                                return <div className='flex justify-center' key={element._id}>
+                                    <Card Product_name={element.Product_Name} Product_price={element.Product_Price} Product_image={element.Product_Image[0]} isDataLoaded={isDataLoaded} />
+                                </div>
+                            })
+                        }
                     </div>
                 </div>
 
@@ -76,11 +76,11 @@ const Home = () => {
                 </div>
 
                 <div className='policies-section w-full items-center justify-center mt-28'>
-                    <Policies/>
+                    <Policies />
                 </div>
 
                 <div className='footer-section w-full items-center justify-center mt-28'>
-                    <Footer/>
+                    <Footer />
                 </div>
 
             </div>

@@ -34,16 +34,16 @@ const Navbar = () => {
                     ))}
                 </div>
                 <div className="profile-wrapper w-30 flex gap-6 justify-center items-center">
-                    <button className="w-6 h-6 flex justify-center items-center cursor-pointer hover:scale-120 transition-all">
+                    <button className="w-6 h-6 flex justify-center items-center cursor-pointer hover:scale-105 transition-none">
                         <IoSearch className="w-full h-full" />
                     </button>
-                    <button className="relative w-6 h-6 flex justify-center items-center cursor-pointer hover:scale-120 transition-all">
+                    <button className="relative w-6 h-6 flex justify-center items-center cursor-pointer hover:scale-105 transition-none">
                         <BsCart2 className="w-full h-full mb-1" />
                         <span className="absolute flex justify-center items-center top-0 start-full w-6 h-3 -translate-x-1/2 -translate-y-1/2 bg-black text-white text-[11px] font-semibold rounded-full p-2">
                             {99}
                         </span>
                     </button>
-                    <button className="w-6 h-6 flex justify-center items-center cursor-pointer hover:scale-120 transition-all">
+                    <button className="w-6 h-6 flex justify-center items-center cursor-pointer hover:scale-105 transition-none">
                         <CgProfile className="w-full h-full" />
                     </button>
                 </div>
