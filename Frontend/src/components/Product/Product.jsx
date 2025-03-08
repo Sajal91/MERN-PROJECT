@@ -9,7 +9,6 @@ const Product = () => {
     useEffect(() => {
         fetchData.getProduct(productId)
             .then((data) => {
-                console.log(data)
                 setIsLoading(false)
             }).catch((error) => {
                 console.log(error)

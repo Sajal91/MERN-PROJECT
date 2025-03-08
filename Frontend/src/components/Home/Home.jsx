@@ -60,9 +60,6 @@ const Home = () => {
                         <div className='flex justify-center'>
                             <Card Product_name={"Men Round Neck Pure Cotton T-shirt"} Product_price={10} />
                         </div>
-                        <div className='flex justify-center'>
-                            <Card Product_name={"Men Round Neck Pure Cotton T-shirt"} Product_price={10} />
-                        </div>
                     </div>
                 </div>
 
