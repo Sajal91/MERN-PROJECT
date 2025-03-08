@@ -37,9 +37,7 @@ const Collection = () => {
             .then((data) => {
                 setIsServerError(false)
                 setCollectionData([...data])
-                setTimeout(() => {
-                    setIsDataLoaded(true);
-                }, 2000);
+                setIsDataLoaded(true);
             }).catch((err) => {
                 setIsDataLoaded(false);
                 setIsServerError(true);

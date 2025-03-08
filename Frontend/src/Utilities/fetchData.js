@@ -8,9 +8,15 @@ const getLatestCollections = async() => {
     return response.json();
 }
 
+const getProduct = async(id) => {
+    let response = await fetch(`http://localhost:8080/product/${id}`)
+    return response.json();
+}
+
 const fetchData = {
     getCollections: getCollections,
     getLatestCollections: getLatestCollections,
+    getProduct: getProduct,
 }
 
 export default fetchData

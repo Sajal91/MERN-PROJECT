@@ -17,7 +17,7 @@ const Card = ({ Product_name, Product_price, Product_image, Product_id, isDataLo
             </div>
           </div>
         </div> :
-        <NavLink to={`/${Product_id}`}>
+        <NavLink to={`/product/${Product_id}`}>
           <div className='flex flex-col h-[340px] w-[250px] justify-center hover:cursor-pointer'>
             <div className="h-[320px] w-full overflow-hidden">
               <img className='w-full h-full hover:scale-105 transition-all' src={Product_image} alt={Product_name} />
