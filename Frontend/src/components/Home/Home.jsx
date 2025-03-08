@@ -3,29 +3,20 @@ import Card from '../Card/Card';
 import Policies from './Policies';
 import Footer from '../Footer/Footer';
 import { useEffect, useState } from 'react';
+import fetchData from '../../Utilities/fetchData';
 
 const Home = () => {
     const [latestCollections, setLatestCollections] = useState([])
     const [isDataLoaded, setIsDataLoaded] = useState(false)
 
-    const getLatestCollections = () => {
-        fetch('http://localhost:8080/latest-products')
-            .then((res) => {
-                res.json()
-                    .then((data) => {
-                        console.log(data)
-                        setLatestCollections([...data])
-                        setIsDataLoaded(true)
-                    }).catch(() => {
-                        setIsDataLoaded(false)
-                    })
+    useEffect(() => {
+        fetchData.getLatestCollections()
+            .then((data) => {
+                setLatestCollections([...data])
+                setIsDataLoaded(true)
             }).catch(() => {
                 setIsDataLoaded(false)
             })
-    }
-
-    useEffect(() => {
-        getLatestCollections()
     }, [])
 
     return (
@@ -46,7 +37,7 @@ const Home = () => {
                         {
                             latestCollections.map((element) => {
                                 return <div className='flex justify-center' key={element._id}>
-                                    <Card Product_name={element.Product_Name} Product_price={element.Product_Price} Product_image={element.Product_Image[0]} isDataLoaded={isDataLoaded} />
+                                    <Card Product_name={element.Product_Name} Product_price={element.Product_Price} Product_image={element.Product_Image[0]} isDataLoaded={isDataLoaded} Product_id={element._id} />
                                 </div>
                             })
                         }
