@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import Card from "../Card/Card"
 import Filter from "./Filter"
+import fetchData from "../../Utilities/fetchData"
 
 const Collection = () => {
 
@@ -32,23 +33,14 @@ const Collection = () => {
     ]
 
     useEffect(() => {
-        fetch("http://localhost:8080/products")
-            .then((result) => {
-                result.json()
-                    .then((response) => {
-                        // console.log(response)
-                        setCollectionData([...response])
-                        setTimeout(() => {
-                            setIsDataLoaded(true);
-                        }, 2000);
-                        setIsServerError(false);
-                    }).catch((err) => {
-                        // console.log(err)
-                        setIsDataLoaded(false);
-                        setIsServerError(true);
-                    })
+        fetchData.getCollections()
+            .then((data) => {
+                setIsServerError(false)
+                setCollectionData([...data])
+                setTimeout(() => {
+                    setIsDataLoaded(true);
+                }, 2000);
             }).catch((err) => {
-                // console.log(err)
                 setIsDataLoaded(false);
                 setIsServerError(true);
             })
@@ -71,10 +63,10 @@ const Collection = () => {
                     <div className="collections-section w-full">
                         <h1 className="text-4xl">All Collections</h1>
                         <div className="w-full mt-6 flex flex-wrap justify-between gap-5">
-                            {   !isServerError ?
+                            {!isServerError ?
                                 collectionData.map((element) => {
                                     return <div className='flex justify-center' key={element._id}>
-                                        <Card Product_name={element.Product_Name} Product_price={element.Product_Price} Product_image={element.Product_Image[0]} isDataLoaded={isDataLoaded} />
+                                        <Card Product_name={element.Product_Name} Product_price={element.Product_Price} Product_image={element.Product_Image[0]} isDataLoaded={isDataLoaded} Product_id={element._id} />
                                     </div>
                                 }) :
                                 <div className="w-full h-screen bg-gray-200 animate-pulse"></div>
