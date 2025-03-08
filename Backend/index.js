@@ -64,6 +64,17 @@ app.get('/latest-products', (request, response) => {
     // })
 })
 
+app.get('/product/:productId', (request, response)=>{
+    let { productId } = request.params;
+    ProductModel.find({_id: productId})
+    .then((result)=>{
+        response.json(result)
+    }).catch((error)=>{
+        console.log(error)
+        // response.send(error)
+    })
+})
+
 // app.get('/delete', async (request, response) => {
 //     ProductModel.deleteMany({})
 //     .then((res) => {

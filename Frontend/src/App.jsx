@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router'
 import './App.css'
 import Home from './components/Home/Home'
 import About from './components/About/About'
@@ -15,14 +15,11 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/collection" element={<Collection />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/product/:productId" element={<Product />} />
         </Routes>
-        
-       
-               
     </>
   )
 }

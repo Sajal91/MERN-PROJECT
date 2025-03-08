@@ -6,7 +6,7 @@ import "./Navbar.css"
 
 const Navbar = () => {
     const navRoutes = [
-        { name: "Home", path: "/home" },
+        { name: "Home", path: "/" },
         { name: "About", path: "/about" },
         { name: "Collection", path: "/collection" },
         { name: "Login", path: "/login" }
@@ -19,7 +19,7 @@ const Navbar = () => {
         <nav className="fixed z-[999] left-0 top-0 flex w-screen justify-between items-center h-18 shadow-md py-4 bg-blue-500 text-white font-bold gap-10">
             <div className="w-[85vw] mx-auto flex justify-between items-center">
                 <div className="logo-wrapper text-2xl w-30 flex justify-center items-center">
-                    <a href="/home" className="w-full">Logo</a>
+                    <a href="/" className="w-full">Logo</a>
                 </div>
                 <div className="nav-links flex justify-center items-center gap-6">
                     {navRoutes.map(({ name, path }, index) => (
