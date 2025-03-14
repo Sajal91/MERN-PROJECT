@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { FC, useEffect, useState } from "react"
 import Card from "../Card/Card"
 import Filter from "./Filter"
 import fetchData from "../../utilities/fetchData"
@@ -6,11 +6,11 @@ import ProductDataInterface from "../../interfaces/productDataInterface"
 import filterArr from "../../utilities/filterArrayData"
 
 
-const Collection = () => {
+const Collection: FC = () => {
 
     const [collectionData, setCollectionData] = useState<ProductDataInterface[]>();
-    const [isDataLoaded, setIsDataLoaded] = useState(false);
-    const [isServerError, setIsServerError] = useState(true);
+    const [isDataLoaded, setIsDataLoaded] = useState<boolean>(false);
+    const [isServerError, setIsServerError] = useState<boolean>(true);
 
     useEffect(() => {
         fetchData.getCollections()
@@ -18,7 +18,7 @@ const Collection = () => {
                 setIsServerError(false)
                 setCollectionData([...data])
                 setIsDataLoaded(true);
-            }).catch((err) => {
+            }).catch(() => {
                 setIsDataLoaded(false);
                 setIsServerError(true);
             })

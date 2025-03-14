@@ -5,7 +5,8 @@ interface ProductDataInterface {
     Product_Image: string[],
     Product_Description: string,
     createdAt: string,
-    updatedAt: string
+    updatedAt: string,
+    __v: number
 }
 
 export default ProductDataInterface

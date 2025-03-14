@@ -8,9 +8,6 @@ import { FC } from "react";
 
 const Navbar: FC = () => {
 
-    const activeNavStyle = { borderBottom: "solid 2px white" };
-    const unactiveNavStyle = { borderBottom: "solid 2px transparent" };
-
     return (
         <nav className="fixed z-[999] left-0 top-0 flex w-screen justify-between items-center h-18 shadow-md py-4 bg-black text-white font-bold gap-10">
             <div className="w-[85vw] mx-auto flex justify-between items-center">
@@ -47,4 +44,4 @@ const Navbar: FC = () => {
     );
 }
 
-export default Navbar;
+export default Navbar
