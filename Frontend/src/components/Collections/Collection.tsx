@@ -1,36 +1,16 @@
 import { useEffect, useState } from "react"
 import Card from "../Card/Card"
 import Filter from "./Filter"
-import fetchData from "../../Utilities/fetchData"
+import fetchData from "../../utilities/fetchData"
+import ProductDataInterface from "../../interfaces/productDataInterface"
+import filterArr from "../../utilities/filterArrayData"
+
 
 const Collection = () => {
 
-    const [collectionData, setCollectionData] = useState([]);
+    const [collectionData, setCollectionData] = useState<ProductDataInterface[]>();
     const [isDataLoaded, setIsDataLoaded] = useState(false);
     const [isServerError, setIsServerError] = useState(true);
-
-    const filterArr = [
-        {
-            id: 0,
-            Filter_Name: "Category",
-            Filter_Type: ["Men", "Women", "Kids"]
-        },
-        {
-            id: 1,
-            Filter_Name: "Category",
-            Filter_Type: ["Men", "Women", "Kids", "Men", "Women", "Kids"]
-        },
-        {
-            id: 2,
-            Filter_Name: "Category",
-            Filter_Type: ["Men", "Women", "Kids", "Men", "Kids"]
-        },
-        {
-            id: 3,
-            Filter_Name: "Category",
-            Filter_Type: ["Men", "Women", "Kids", "Men", "Women", "Kids", "Men", "Women", "Kids"]
-        }
-    ]
 
     useEffect(() => {
         fetchData.getCollections()
@@ -53,7 +33,7 @@ const Collection = () => {
                         <div className="filters-box">
                             {
                                 filterArr.map((element, index) => {
-                                    return <Filter prop={element} key={index} />
+                                    return <Filter Filter_Name={element.Filter_Name} Filter_Type={element.Filter_Type} id={element.id} key={index} />
                                 })
                             }
                         </div>
@@ -62,7 +42,7 @@ const Collection = () => {
                         <h1 className="text-4xl">All Collections</h1>
                         <div className="w-full mt-6 flex flex-wrap justify-between gap-5">
                             {!isServerError ?
-                                collectionData.map((element) => {
+                                collectionData?.map((element) => {
                                     return <div className='flex justify-center' key={element._id}>
                                         <Card Product_name={element.Product_Name} Product_price={element.Product_Price} Product_image={element.Product_Image[0]} isDataLoaded={isDataLoaded} Product_id={element._id} />
                                     </div>

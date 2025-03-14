@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router'
+import { Route, Routes } from 'react-router'
 import './App.css'
 import Home from './components/Home/Home'
 import About from './components/About/About'
@@ -6,9 +6,10 @@ import Product from './components/Product/Product'
 import Login from './components/Login/Login'
 import Navbar from './components/Navbar/Navbar'
 import Collection from './components/Collections/Collection'
+import { FC } from 'react'
 
 
-function App() {
+const App: FC = () => {
 
   return (
     <>

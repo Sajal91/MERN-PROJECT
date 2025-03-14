@@ -1,9 +1,9 @@
-import React from 'react';
+import { FC } from 'react';
 import { RiExchangeFundsLine } from "react-icons/ri";
 import { MdVerified } from "react-icons/md";
 import { FiHeadphones } from "react-icons/fi";
 
-const Policies = () => {
+const Policies: FC = () => {
   return (
     <div className="flex gap-36 justify-center items-center w-full text-center flex-wrap">
       <div className="flex flex-col justify-center items-center">

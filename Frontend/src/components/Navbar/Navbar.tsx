@@ -3,9 +3,10 @@ import { IoSearch } from "react-icons/io5";
 import { BsCart2 } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
 import "./Navbar.css"
-import navRoutes from "../../Utilities/navRoutes";
+import navRoutes from "../../utilities/navRoutes";
+import { FC } from "react";
 
-const Navbar = () => {
+const Navbar: FC = () => {
 
     const activeNavStyle = { borderBottom: "solid 2px white" };
     const unactiveNavStyle = { borderBottom: "solid 2px transparent" };
@@ -21,7 +22,7 @@ const Navbar = () => {
                         <NavLink
                             key={index}
                             to={path}
-                            className={e => "text-gray-400 tracking-wider text-lg font-medium focus:outline-none transition-all duration-100 border-b-2 border-transparent" + (e.isActive ? "border-white text-white hover:text-white" : "hover:text-white hover:border-white border-transparent")}
+                            className={(e) => "text-gray-400 tracking-wider text-lg font-medium focus:outline-none transition-all duration-100 border-b-2 border-transparent" + (e.isActive ? "border-white text-white hover:text-white" : "hover:text-white hover:border-white border-transparent")}
                         >
                             <p className="">{name}</p>
                         </NavLink>

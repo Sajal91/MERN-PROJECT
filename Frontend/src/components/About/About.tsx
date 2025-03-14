@@ -1,4 +1,6 @@
-const About = () => {
+import { FC } from "react"
+
+const About: FC = () => {
     return (
         <>
             <h1 className='text-center text-5xl font-bold uppercase'>About Page...</h1>

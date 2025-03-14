@@ -8,7 +8,7 @@ const getLatestCollections = async() => {
     return response.json();
 }
 
-const getProduct = async(id) => {
+const getProduct = async(id: string) => {
     let response = await fetch(`http://localhost:8080/product/${id}`)
     return response.json();
 }
