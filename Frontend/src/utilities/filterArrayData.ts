@@ -4,7 +4,7 @@ interface FilterArrayInterface {
     Filter_Type: string[]
 }
 
-const filterArr = <FilterArrayInterface[]> [
+const filterArr: FilterArrayInterface[] = [
     {
         id: 0,
         Filter_Name: "Category",

@@ -1,4 +1,4 @@
-import React from "react"
+import {FC} from "react"
 
 interface FilterArrayInterface {
     id: number,
@@ -6,7 +6,7 @@ interface FilterArrayInterface {
     Filter_Type: string[]
 }
 
-const Filter: React.FC<FilterArrayInterface> = ({ Filter_Name, Filter_Type, id }) => {
+const Filter: FC<FilterArrayInterface> = ({ Filter_Name, Filter_Type, id }) => {
     return (
         <>
             <div className="w-[200px] py-2 px-4 mt-6 border-1 border-gray-400 flex flex-col">

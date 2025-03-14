@@ -1,16 +1,8 @@
 import { FC } from 'react'
 import { NavLink } from 'react-router'
-// import img from "../../assets/Images/Product2.png"
+import CardInterface from '../../interfaces/cardInterface'
 
-interface CardInterface {
-  Product_name: string,
-  Product_price: number,
-  Product_image: string,
-  Product_id: string,
-  isDataLoaded: boolean
-}
-
-const Card: FC<CardInterface> = ({ Product_name, Product_price, Product_image, Product_id, isDataLoaded }) => {
+const Card: FC<CardInterface> = ({ Product_name, Product_price, Product_id, Product_image, isDataLoaded }) => {
   return (
     <>
       {!isDataLoaded ?
