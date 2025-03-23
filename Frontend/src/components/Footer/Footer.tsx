@@ -1,4 +1,4 @@
-import {FC} from 'react'
+import { FC } from 'react'
 
 const Footer: FC = () => {
   return (
@@ -14,23 +14,27 @@ const Footer: FC = () => {
         </div>
       </div>
 
-      <div className='flex justify-between mt-30'>
-        <div className='w-[350px]'>
-          <h1 className='text-4xl font-semibold mb-5 '> Logo </h1>
-          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia voluptatum facilis culpa, sed consequatur laborum temporibus repellendus ipsum quo, molestiae similique, optio adipisci. Hic quam reprehenderit facere, dignissimos id provident.</p>
+      <div className='flex justify-between mt-30 flex-wrap'>
+        <div className='max-w-[450px] w-full'>
+          <h1 className='text-4xl font-semibold mb-5'> Logo </h1>
+          <p className='text-left text-sm leading-6'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia voluptatum facilis culpa, sed consequatur laborum temporibus repellendus ipsum quo, molestiae similique, optio adipisci. Hic quam reprehenderit facere, dignissimos id provident.</p>
         </div>
-        <div className='flex gap-15'>
+        <div className='flex justify-center max-w-[450px] w-full gap-10 flex-wrap'>
           <div>
             <h1 className='text-4xl font-semibold mb-5'> Company</h1>
-            <p> Home</p>
-            <p> About us </p>
-            <p> Delivery </p>
-            <p> Privacy Policy </p>
+            <ul className='text-sm'>
+              <li> Home</li>
+              <li> About us </li>
+              <li> Delivery </li>
+              <li> Privacy Policy </li>
+            </ul>
           </div>
           <div>
             <h1 className='text-4xl font-semibold mb-5'>Get in Touch</h1>
-            <p> +100000011848 </p>
-            <p>ourlogo@gmail.com </p>
+            <ul className='text-sm'>
+              <li> +100000011848 </li>
+              <li>ourlogo@gmail.com </li>
+            </ul>
           </div>
         </div>
       </div>

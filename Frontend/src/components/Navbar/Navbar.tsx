@@ -9,7 +9,7 @@ import { FC } from "react";
 const Navbar: FC = () => {
 
     return (
-        <nav className="fixed z-[999] left-0 top-0 flex w-screen justify-between items-center h-18 shadow-md py-4 bg-black text-white font-bold gap-10">
+        <nav className="fixed z-[999] left-0 top-0 flex w-screen justify-between items-center h-14 shadow-lg py-4 bg-black text-white gap-10 border-b-6 border-gray-400">
             <div className="w-[85vw] mx-auto flex justify-between items-center">
                 <div className="logo-wrapper text-2xl w-30 flex justify-center items-center">
                     <a href="/" className="w-full">Logo</a>
@@ -19,9 +19,12 @@ const Navbar: FC = () => {
                         <NavLink
                             key={index}
                             to={path}
-                            className={(e) => "text-gray-400 tracking-wider text-lg font-medium focus:outline-none transition-all duration-100 border-b-2 border-transparent" + (e.isActive ? "border-white text-white hover:text-white" : "hover:text-white hover:border-white border-transparent")}
+                            className={({ isActive }) =>
+                                `text-gray-400 tracking-wider text-lg font-medium focus:outline-none transition-all duration-100 border-b-2 border-transparent 
+                                hover:text-white ${isActive ? 'border-white text-white' : 'hover:border-white'}`
+                            }
                         >
-                            <p className="">{name}</p>
+                            <p className="text-sm">{name}</p>
                         </NavLink>
                     ))}
                 </div>
@@ -31,7 +34,7 @@ const Navbar: FC = () => {
                     </button>
                     <button className="relative w-6 h-6 flex justify-center items-center cursor-pointer hover:scale-105 transition-none">
                         <BsCart2 className="w-full h-full mb-1" />
-                        <span className="absolute flex justify-center items-center top-0 start-full -translate-x-1/2 -translate-y-1/2 bg-blue-500 text-white text-[11px] font-semibold rounded-full px-2">
+                        <span className="absolute h-4 w-4 flex justify-center items-center top-0 start-full -translate-x-1/2 -translate-y-1/2 bg-white text-black text-xs font-semibold rounded-full shadow-2xl">
                             {9}
                         </span>
                     </button>
