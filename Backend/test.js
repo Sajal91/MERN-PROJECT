@@ -3,12 +3,12 @@ const mongoose = require("mongoose");
 const cors = require("cors")
 require("dotenv").config();
 const app = express();
-const port = process.env.PORT;
+const port = 3000;
 const ProductModel = require("./Models/ProductSchema");
 
 main()
     .then(console.log("Database Connected Successfully"))
-    .catch(err => console.log(err));
+    .catch(err => console.log("err"));
 
 async function main() {
     await mongoose.connect(process.env.MONGOURL);
@@ -18,6 +18,10 @@ app.use(cors())
 app.use(express.urlencoded({ extended: true }))
 
 
+const Img_Arr = [
+    "https://res.cloudinary.com/dhkxnncgz/image/upload/v1742891090/shapzv9apnvgannhf7q3.jpg",
+    "https://res.cloudinary.com/dhkxnncgz/image/upload/v1742891090/bagxclpfhuemapgrzogn.jpg","https://res.cloudinary.com/dhkxnncgz/image/upload/v1742891090/ihpblcfvdefot8ix7r2t.jpg"
+]
 
 // app.get('/delete', async (request, response) => {
 //     ProductModel.deleteMany({})
@@ -69,6 +73,15 @@ app.use(express.urlencoded({ extended: true }))
 // ProductModel.insertOne(p1)
 // .then((res) => {
 //     console.log(res);
+// })
+
+// app.get('/update', (request, response) => {
+//     ProductModel.updateMany({}, {$set: {Product_Image: Img_Arr}})
+//     .then((result)=>{
+//         console.log(result)
+//     }).catch((err)=>{
+//         console.log("err",err)
+//     })
 // })
 
 app.listen(port, () => {
