@@ -39,7 +39,7 @@ const Footer: FC = () => {
         </div>
       </div>
       <hr className='mt-5' />
-      <div className='text-center mb-2 mt-2'> <p>Copyright 2024@ greatstack.dev - All Right Reserved.</p> </div>
+      <div className='text-center mb-2 mt-2'> <p>Copyright 2024@ Rohan.dev & Sajal.dev - All Right Reserved.</p> </div>
     </div>
 
 

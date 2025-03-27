@@ -29,7 +29,9 @@ const About: FC = () => {
                         </div>
                        
                     </div>
-                   
+                    <div className='footer-section w-full items-center justify-center mt-28'>
+                    <Footer />
+                </div>
                   
                 </div>
               
