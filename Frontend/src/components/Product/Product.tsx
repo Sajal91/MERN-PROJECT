@@ -8,8 +8,8 @@ const Product: FC = () => {
     const { productId } = useParams<{ productId: string }>();
 
     const [isLoading, setIsLoading] = useState<boolean>(true);
-    const [productdata, setProductdata] = useState<ProductDataInterface | null>(null);
-    const [productimage, setProductimage] = useState<string>("");
+    const [productData, setProductData] = useState<ProductDataInterface | null>(null);
+    const [productImage, setProductImage] = useState<string>("");
     const [selectedSize, setSelectedSize] = useState<string>("");
     const [error, setError] = useState<string | null>(null);
 
@@ -25,8 +25,8 @@ const Product: FC = () => {
                 .then((data) => {
                     setIsLoading(false);
                     if (data.length > 0) {
-                        setProductdata(data[0]);
-                        setProductimage(data[0]?.Product_Image?.[0] || "");
+                        setProductData(data[0]);
+                        setProductImage(data[0]?.Product_Image?.[0] || "");
                     } else {
                         setError("Product not found.");
                     }
@@ -40,7 +40,7 @@ const Product: FC = () => {
     }, [productId]);
 
     const onProductimage = (image: string) => {
-        setProductimage(image);
+        setProductImage(image);
     };
 
     return (
@@ -59,12 +59,12 @@ const Product: FC = () => {
                     <div className="flex w-full flex-wrap justify-center">
                         <div className="flex w-1/2 flex-wrap">
                             <div>
-                                {productdata?.Product_Image?.length ? (
-                                    productdata.Product_Image.map((image, index) => (
+                                {productData?.Product_Image?.length ? (
+                                    productData.Product_Image.map((image, index) => (
                                         <div key={index}>
                                             <img 
                                                 src={image} 
-                                                alt={productdata.Product_Name} 
+                                                alt={productData.Product_Name} 
                                                 className="bg-gray-200 h-[100px] w-[150px] overflow-hidden cursor-pointer" 
                                                 onClick={() => onProductimage(image)} 
                                             />
@@ -76,17 +76,17 @@ const Product: FC = () => {
                             </div>
                             <div>
                                 <img 
-                                    src={productimage || "/placeholder.jpg"} 
+                                    src={productImage || "/placeholder.jpg"} 
                                     alt="Selected Product" 
                                     className="h-[60vh] w-[25vw] bg-white p-5" 
                                 />
                             </div>
                         </div>
                         <div className="w-1/2 max-w-[600px]">
-                            <h1 className="text-2xl mt-10">{productdata?.Product_Name || "Product Name"}</h1>
+                            <h1 className="text-2xl mt-10">{productData?.Product_Name || "Product Name"}</h1>
                             <h6 className="mt-5">Reviews</h6>
-                            <h6 className="mt-5 text-2xl font-bold">${productdata?.Product_Price || "0.00"}</h6>
-                            <p className="mt-5 font-extralight">{productdata?.Product_Description || "No description available."}</p>
+                            <h6 className="mt-5 text-2xl font-bold">${productData?.Product_Price || "0.00"}</h6>
+                            <p className="mt-5 font-extralight">{productData?.Product_Description || "No description available."}</p>
                             <h1 className="mt-5">Select Size</h1>
                             <div className="flex gap-3 mt-5">
                                 {sizes.map((size) => (
