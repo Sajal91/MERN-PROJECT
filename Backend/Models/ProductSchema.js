@@ -14,6 +14,15 @@ const ProductSchema = new Schema({
     Product_Description: {
         type: String,
         required: true
+    },
+    Product_Available_Size: [String],
+    Product_Category: {
+        type: String,
+        required: true
+    },
+    Product_SubCategory: {
+        type: String,
+        required: true
     }
 }, { timestamps: true }) // This Will Automatically add createdAt and UpdatedAt Fields
 

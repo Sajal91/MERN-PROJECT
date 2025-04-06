@@ -24,7 +24,7 @@ const Card: FC<CardInterface> = ({ Product_name, Product_price, Product_id, Prod
             </div>
             <div className='pt-1'>
               <>
-                <p className='text-[13px]'>{Product_name}</p>
+                <p className='text-[13px]'>{Product_name.slice(0, 30)}..</p>
                 <p className='font-semibold'>${Product_price}</p>
               </>
             </div>

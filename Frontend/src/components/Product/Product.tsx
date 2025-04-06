@@ -26,7 +26,7 @@ const Product: FC = () => {
                     setIsLoading(false);
                     if (data.length > 0) {
                         setProductData(data[0]);
-                        setProductImage(data[0]?.Product_Image?.[0] || "");
+                        setProductImage(data[0]?.Product_Image?.[0]);
                     } else {
                         setError("Product not found.");
                     }
@@ -36,7 +36,7 @@ const Product: FC = () => {
                     setError("Failed to load product.");
                     setIsLoading(false);
                 });
-        }, 2000); // ⏳ Simulated delay of 2 seconds
+        }, 0); // ⏳ Simulated delay of 2 seconds
     }, [productId]);
 
     const onProductimage = (image: string) => {
@@ -46,26 +46,24 @@ const Product: FC = () => {
     return (
         <div className="absolute top-0 left-0 pt-24 w-full h-screen overflow-scroll scroll-smooth flex justify-center items-center">
             {isLoading ? (
-                // 🔥 Loading Animation with Timeout
                 <div className="flex flex-col items-center">
                     <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500 border-solid"></div>
                     <p className="mt-3 text-lg text-gray-500">Loading Product...</p>
                 </div>
             ) : error ? (
-                // ❌ Error Message
                 <div className="text-center text-red-500 text-lg">{error}</div>
             ) : (
-                <div className="absolute left-1/2 -translate-x-1/2 w-[85vw] flex justify-between">
+                <div className="absolute left-1/2 -translate-x-1/2 w-[85vw] top-24 flex justify-between">
                     <div className="flex w-full flex-wrap justify-center">
-                        <div className="flex w-1/2 flex-wrap">
-                            <div>
+                        <div className="flex w-1/2 gap-6 h-[410px]">
+                            <div className="flex flex-col justify-between gap-4 h-full">
                                 {productData?.Product_Image?.length ? (
                                     productData.Product_Image.map((image, index) => (
-                                        <div key={index}>
+                                        <div key={index} className="border-1 border-white w-24 h-28">
                                             <img 
                                                 src={image} 
                                                 alt={productData.Product_Name} 
-                                                className="bg-gray-200 h-[100px] w-[150px] overflow-hidden cursor-pointer" 
+                                                className="bg-gray-200 h-full w-full overflow-hidden cursor-pointer" 
                                                 onClick={() => onProductimage(image)} 
                                             />
                                         </div>
@@ -74,19 +72,19 @@ const Product: FC = () => {
                                     <p>No images available</p>
                                 )}
                             </div>
-                            <div>
+                            <div className="w-[350px] h-[410px]">
                                 <img 
-                                    src={productImage || "/placeholder.jpg"} 
+                                    src={productImage} 
                                     alt="Selected Product" 
-                                    className="h-[60vh] w-[25vw] bg-white p-5" 
+                                    className="h-full w-full" 
                                 />
                             </div>
                         </div>
                         <div className="w-1/2 max-w-[600px]">
-                            <h1 className="text-2xl mt-10">{productData?.Product_Name || "Product Name"}</h1>
+                            <h1 className="text-2xl">{productData?.Product_Name}</h1>
                             <h6 className="mt-5">Reviews</h6>
-                            <h6 className="mt-5 text-2xl font-bold">${productData?.Product_Price || "0.00"}</h6>
-                            <p className="mt-5 font-extralight">{productData?.Product_Description || "No description available."}</p>
+                            <h6 className="mt-5 text-2xl font-bold">${productData?.Product_Price}</h6>
+                            <p className="mt-5 font-extralight">{productData?.Product_Description}</p>
                             <h1 className="mt-5">Select Size</h1>
                             <div className="flex gap-3 mt-5">
                                 {sizes.map((size) => (

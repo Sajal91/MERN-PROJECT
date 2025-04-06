@@ -5,6 +5,8 @@ require("dotenv").config();
 const app = express();
 const port = 3000;
 const ProductModel = require("./Models/ProductSchema");
+const sampleProducts = require("./Data/sampledata");
+const products = require("./Data/sampledata");
 
 main()
     .then(console.log("Database Connected Successfully"))
@@ -18,10 +20,11 @@ app.use(cors())
 app.use(express.urlencoded({ extended: true }))
 
 
-const Img_Arr = [
-    "https://res.cloudinary.com/dhkxnncgz/image/upload/v1742891090/shapzv9apnvgannhf7q3.jpg",
-    "https://res.cloudinary.com/dhkxnncgz/image/upload/v1742891090/bagxclpfhuemapgrzogn.jpg","https://res.cloudinary.com/dhkxnncgz/image/upload/v1742891090/ihpblcfvdefot8ix7r2t.jpg"
-]
+// const Img_Arr = [
+//     "https://res.cloudinary.com/dhkxnncgz/image/upload/v1741171027/ECOM/elsnrphqckggpycrarzh.png",
+//     "https://res.cloudinary.com/dhkxnncgz/image/upload/v1741171027/ECOM/elsnrphqckggpycrarzh.png",
+//     "https://res.cloudinary.com/dhkxnncgz/image/upload/v1741171027/ECOM/elsnrphqckggpycrarzh.png"
+// ]
 
 // app.get('/delete', async (request, response) => {
 //     ProductModel.deleteMany({})
@@ -82,6 +85,20 @@ const Img_Arr = [
 //     }).catch((err)=>{
 //         console.log("err",err)
 //     })
+// })
+
+// const addData = (i) => {
+//     let product = new ProductModel(products[i]);
+//     product.save()
+//         .then((result) => {
+//             console.log(result)
+//         })
+// }
+
+// app.get('/update', (request, response) => {
+//     let i = 0;
+//     const intervalId = setInterval(() => addData(i++), 1000);
+//     setTimeout(() => clearInterval(intervalId), 53000);
 // })
 
 app.listen(port, () => {
