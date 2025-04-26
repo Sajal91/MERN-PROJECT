@@ -4,25 +4,46 @@ import Filter from "./Filter"
 import fetchData from "../../utilities/fetchData"
 import ProductDataInterface from "../../interfaces/productDataInterface"
 import filterArr from "../../utilities/filterArrayData"
+import { useRecoilValue } from "recoil"
+import { filterRecoilState } from "../../recoil/filterRecoilState"
 
 
 const Collection: FC = () => {
 
-    const [collectionData, setCollectionData] = useState<ProductDataInterface[]>();
+    const [collectionData, setCollectionData] = useState<ProductDataInterface[]>([]);
+    const [filteredCollections, setFilterCollections] = useState<ProductDataInterface[]>([]);
     const [isDataLoaded, setIsDataLoaded] = useState<boolean>(false);
     const [isServerError, setIsServerError] = useState<boolean>(true);
+    const filterCategories = useRecoilValue(filterRecoilState);
 
     useEffect(() => {
         fetchData.getCollections()
             .then((data) => {
                 setIsServerError(false)
                 setCollectionData([...data])
+                setFilterCollections([...data])
                 setIsDataLoaded(true);
             }).catch(() => {
                 setIsDataLoaded(false);
                 setIsServerError(true);
             })
     }, [])
+
+    useEffect(() => {
+        checkFilterCategories();
+    }, [filterCategories])
+
+    const checkFilterCategories = () => {
+        setFilterCollections([])
+        if(filterCategories.length > 0) {
+            filterCategories.map((category) => {
+                let filteredData = collectionData?.filter(element => category === element.Product_Category)
+                setFilterCollections(prevItems => [...prevItems, ...filteredData])
+            })
+        } else {
+            setFilterCollections(collectionData)
+        }
+    }
 
     return (
         <>
@@ -42,12 +63,17 @@ const Collection: FC = () => {
                         <h1 className="text-4xl">All Collections</h1>
                         <div className="w-full mt-6 flex flex-wrap justify-between gap-5">
                             {!isServerError ?
-                                collectionData?.map((element) => {
+                                filteredCollections?.map((element) => {
                                     return <div className='flex justify-center' key={element._id}>
                                         <Card Product_name={element.Product_Name} Product_price={element.Product_Price} Product_image={element.Product_Image[0]} isDataLoaded={isDataLoaded} Product_id={element._id} />
                                     </div>
                                 }) :
-                                <div className="w-full h-screen bg-gray-200 animate-pulse"></div>
+
+                                [...Array(8)].map((_, index) => {
+                                    return <div className='flex justify-center' key={index}>
+                                        <Card Product_id="" Product_image="" Product_name="" Product_price={0} isDataLoaded={false} />
+                                    </div>
+                                })
                             }
                         </div>
                     </div>

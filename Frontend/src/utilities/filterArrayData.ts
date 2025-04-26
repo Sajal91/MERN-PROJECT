@@ -1,3 +1,5 @@
+import CATEGORY from "../constants/category"
+
 interface FilterArrayInterface {
     id: number,
     Filter_Name: string,
@@ -8,23 +10,13 @@ const filterArr: FilterArrayInterface[] = [
     {
         id: 0,
         Filter_Name: "Category",
-        Filter_Type: ["Men", "Women", "Kids"]
+        Filter_Type: [CATEGORY.MEN, CATEGORY.WOMEN, CATEGORY.KIDS]
     },
-    {
-        id: 1,
-        Filter_Name: "Category",
-        Filter_Type: ["Men", "Women", "Kids", "Men", "Women", "Kids"]
-    },
-    {
-        id: 2,
-        Filter_Name: "Category",
-        Filter_Type: ["Men", "Women", "Kids", "Men", "Kids"]
-    },
-    {
-        id: 3,
-        Filter_Name: "Category",
-        Filter_Type: ["Men", "Women", "Kids", "Men", "Women", "Kids", "Men", "Women", "Kids"]
-    }
+    // {
+    //     id: 1,
+    //     Filter_Name: "Sub Category",
+    //     Filter_Type: [CATEGORY.TOP_WEAR, CATEGORY.BOTTOM_WEAR, CATEGORY.WINTER_WEAR]
+    // }
 ]
 
 export default filterArr

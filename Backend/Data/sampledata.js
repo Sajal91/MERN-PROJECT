@@ -5,7 +5,7 @@ const products = [
         Product_Price: 100,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939432/ECOM/p_img1_meuwvx.png"],
         Product_Category: "Women",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "M", "L"],
     },
     {
@@ -14,7 +14,7 @@ const products = [
         Product_Price: 200,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939432/ECOM/p_img2_uwr6fy.png", "https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939433/ECOM/p_img2_2_kdit0r.png", "https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939433/ECOM/p_img2_3_vrotbv.png", "https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939434/ECOM/p_img2_4_loiwcx.png"],
         Product_Category: "Men",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["M", "L", "XL"],
     },
     {
@@ -23,7 +23,7 @@ const products = [
         Product_Price: 220,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939416/ECOM/p_img3_tg5srp.png"],
         Product_Category: "Kids",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "L", "XL"],
     },
     {
@@ -32,7 +32,7 @@ const products = [
         Product_Price: 110,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939416/ECOM/p_img4_kquoec.png"],
         Product_Category: "Men",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "M", "XXL"],
     },
     {
@@ -41,7 +41,7 @@ const products = [
         Product_Price: 130,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939415/ECOM/p_img5_qsmc3z.png"],
         Product_Category: "Women",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["M", "L", "XL"],
     },
     {
@@ -50,7 +50,7 @@ const products = [
         Product_Price: 140,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939415/ECOM/p_img6_yc551t.png"],
         Product_Category: "Kids",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "L", "XL"],
     },
     {
@@ -59,7 +59,7 @@ const products = [
         Product_Price: 190,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939415/ECOM/p_img7_oaolri.png"],
         Product_Category: "Men",
-        Product_SubCategory: "Bottomwear",
+        Product_SubCategory: "Bottom Wear",
         Product_Available_Size: ["S", "L", "XL"],
     },
     {
@@ -68,7 +68,7 @@ const products = [
         Product_Price: 140,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939415/ECOM/p_img8_gzzttg.png"],
         Product_Category: "Men",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -77,7 +77,7 @@ const products = [
         Product_Price: 100,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939416/ECOM/p_img9_eylyup.png"],
         Product_Category: "Kids",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["M", "L", "XL"],
     },
     {
@@ -86,7 +86,7 @@ const products = [
         Product_Price: 110,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939435/ECOM/p_img10_uprxdd.png"],
         Product_Category: "Men",
-        Product_SubCategory: "Bottomwear",
+        Product_SubCategory: "Bottom Wear",
         Product_Available_Size: ["S", "L", "XL"],
     },
     {
@@ -95,7 +95,7 @@ const products = [
         Product_Price: 120,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939435/ECOM/p_img11_qysynw.png"],
         Product_Category: "Men",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "M", "L"],
     },
     {
@@ -104,7 +104,7 @@ const products = [
         Product_Price: 150,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939436/ECOM/p_img12_nnwoaz.png"],
         Product_Category: "Men",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -113,7 +113,7 @@ const products = [
         Product_Price: 130,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939436/ECOM/p_img13_z6sblg.png"],
         Product_Category: "Women",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -122,7 +122,7 @@ const products = [
         Product_Price: 160,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939437/ECOM/p_img14_xy925z.png"],
         Product_Category: "Kids",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -131,7 +131,7 @@ const products = [
         Product_Price: 140,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939437/ECOM/p_img15_vqi1ah.png"],
         Product_Category: "Men",
-        Product_SubCategory: "Bottomwear",
+        Product_SubCategory: "Bottom Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -140,7 +140,7 @@ const products = [
         Product_Price: 170,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939439/ECOM/p_img16_ree94g.png"],
         Product_Category: "Kids",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -149,7 +149,7 @@ const products = [
         Product_Price: 150,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939440/ECOM/p_img17_v5eiuw.png"],
         Product_Category: "Men",
-        Product_SubCategory: "Bottomwear",
+        Product_SubCategory: "Bottom Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -158,7 +158,7 @@ const products = [
         Product_Price: 180,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939441/ECOM/p_img18_ojpgnu.png"],
         Product_Category: "Kids",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -167,7 +167,7 @@ const products = [
         Product_Price: 160,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939443/ECOM/p_img19_htwqpi.png"],
         Product_Category: "Kids",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -176,7 +176,7 @@ const products = [
         Product_Price: 190,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939445/ECOM/p_img20_kzkgri.png"],
         Product_Category: "Women",
-        Product_SubCategory: "Bottomwear",
+        Product_SubCategory: "Bottom Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -185,7 +185,7 @@ const products = [
         Product_Price: 170,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939446/ECOM/p_img21_esrht0.png"],
         Product_Category: "Women",
-        Product_SubCategory: "Winterwear",
+        Product_SubCategory: "Winter Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -194,7 +194,7 @@ const products = [
         Product_Price: 200,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939416/ECOM/p_img22_hhteyj.png"],
         Product_Category: "Women",
-        Product_SubCategory: "Bottomwear",
+        Product_SubCategory: "Bottom Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -203,7 +203,7 @@ const products = [
         Product_Price: 180,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939416/ECOM/p_img23_uezg2k.png"],
         Product_Category: "Kids",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -212,7 +212,7 @@ const products = [
         Product_Price: 210,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939416/ECOM/p_img24_fvehtm.png"],
         Product_Category: "Kids",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -221,7 +221,7 @@ const products = [
         Product_Price: 190,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939417/ECOM/p_img25_hmp6ff.png"],
         Product_Category: "Kids",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -230,7 +230,7 @@ const products = [
         Product_Price: 220,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939417/ECOM/p_img26_twx8dk.png"],
         Product_Category: "Women",
-        Product_SubCategory: "Winterwear",
+        Product_SubCategory: "Winter Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -239,7 +239,7 @@ const products = [
         Product_Price: 200,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939418/ECOM/p_img27_d82h6u.png"],
         Product_Category: "Kids",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -248,7 +248,7 @@ const products = [
         Product_Price: 230,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939419/ECOM/p_img28_zc1ujd.png"],
         Product_Category: "Men",
-        Product_SubCategory: "Winterwear",
+        Product_SubCategory: "Winter Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -257,7 +257,7 @@ const products = [
         Product_Price: 210,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939419/ECOM/p_img29_jhnvwm.png"],
         Product_Category: "Women",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -266,7 +266,7 @@ const products = [
         Product_Price: 240,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939419/ECOM/p_img30_ptmb6r.png"],
         Product_Category: "Kids",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -275,7 +275,7 @@ const products = [
         Product_Price: 220,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939420/ECOM/p_img31_qahrtq.png"],
         Product_Category: "Men",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -284,7 +284,7 @@ const products = [
         Product_Price: 250,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939421/ECOM/p_img32_fhyrvq.png"],
         Product_Category: "Men",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -293,7 +293,7 @@ const products = [
         Product_Price: 230,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939422/ECOM/p_img33_izxfxc.png"],
         Product_Category: "Kids",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -302,7 +302,7 @@ const products = [
         Product_Price: 260,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939422/ECOM/p_img34_pg6oae.png"],
         Product_Category: "Women",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -311,7 +311,7 @@ const products = [
         Product_Price: 240,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939422/ECOM/p_img35_unloqr.png"],
         Product_Category: "Women",
-        Product_SubCategory: "Winterwear",
+        Product_SubCategory: "Winter Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -320,7 +320,7 @@ const products = [
         Product_Price: 270,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939423/ECOM/p_img36_cvmcqv.png"],
         Product_Category: "Women",
-        Product_SubCategory: "Winterwear",
+        Product_SubCategory: "Winter Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -329,7 +329,7 @@ const products = [
         Product_Price: 250,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939425/ECOM/p_img37_kq43n3.png"],
         Product_Category: "Women",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -338,7 +338,7 @@ const products = [
         Product_Price: 280,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939425/ECOM/p_img38_irh54m.png"],
         Product_Category: "Men",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -347,7 +347,7 @@ const products = [
         Product_Price: 260,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939425/ECOM/p_img39_jfn1nd.png"],
         Product_Category: "Men",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -356,7 +356,7 @@ const products = [
         Product_Price: 290,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939426/ECOM/p_img40_kzpqhz.png"],
         Product_Category: "Men",
-        Product_SubCategory: "Winterwear",
+        Product_SubCategory: "Winter Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -365,7 +365,7 @@ const products = [
         Product_Price: 270,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939426/ECOM/p_img41_qd0jec.png"],
         Product_Category: "Men",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -374,7 +374,7 @@ const products = [
         Product_Price: 300,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939427/ECOM/p_img42_qyrpyj.png"],
         Product_Category: "Kids",
-        Product_SubCategory: "Topwear",
+        Product_SubCategory: "Top Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -383,7 +383,7 @@ const products = [
         Product_Price: 280,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939428/ECOM/p_img43_mmubly.png"],
         Product_Category: "Kids",
-        Product_SubCategory: "Bottomwear",
+        Product_SubCategory: "Bottom Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -392,7 +392,7 @@ const products = [
         Product_Price: 310,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939428/ECOM/p_img44_ii6ybb.png"],
         Product_Category: "Women",
-        Product_SubCategory: "Winterwear",
+        Product_SubCategory: "Winter Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -401,7 +401,7 @@ const products = [
         Product_Price: 290,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939429/ECOM/p_img45_bohh75.png"],
         Product_Category: "Men",
-        Product_SubCategory: "Winterwear",
+        Product_SubCategory: "Winter Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -410,7 +410,7 @@ const products = [
         Product_Price: 320,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939429/ECOM/p_img46_om1zga.png"],
         Product_Category: "Men",
-        Product_SubCategory: "Winterwear",
+        Product_SubCategory: "Winter Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -419,7 +419,7 @@ const products = [
         Product_Price: 300,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939430/ECOM/p_img47_efeqr6.png"],
         Product_Category: "Kids",
-        Product_SubCategory: "Bottomwear",
+        Product_SubCategory: "Bottom Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -428,7 +428,7 @@ const products = [
         Product_Price: 330,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939431/ECOM/p_img48_nsnhx5.png"],
         Product_Category: "Men",
-        Product_SubCategory: "Winterwear",
+        Product_SubCategory: "Winter Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -437,7 +437,7 @@ const products = [
         Product_Price: 310,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939415/ECOM/p_img49_nn556x.png"],
         Product_Category: "Kids",
-        Product_SubCategory: "Bottomwear",
+        Product_SubCategory: "Bottom Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -446,7 +446,7 @@ const products = [
         Product_Price: 340,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939415/ECOM/p_img50_q3urn8.png"],
         Product_Category: "Kids",
-        Product_SubCategory: "Bottomwear",
+        Product_SubCategory: "Bottom Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -455,7 +455,7 @@ const products = [
         Product_Price: 320,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939415/ECOM/p_img51_foa51w.png"],
         Product_Category: "Women",
-        Product_SubCategory: "Winterwear",
+        Product_SubCategory: "Winter Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     },
     {
@@ -464,7 +464,7 @@ const products = [
         Product_Price: 350,
         Product_Image: ["https://res.cloudinary.com/dhkxnncgz/image/upload/v1743939416/ECOM/p_img52_uthaz1.png"],
         Product_Category: "Men",
-        Product_SubCategory: "Winterwear",
+        Product_SubCategory: "Winter Wear",
         Product_Available_Size: ["S", "M", "L", "XL"],
     }
 
