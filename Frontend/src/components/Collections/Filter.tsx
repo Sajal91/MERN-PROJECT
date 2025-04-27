@@ -1,6 +1,4 @@
 import { FC } from "react"
-import { useRecoilState } from "recoil"
-import { filterRecoilState } from "../../recoil/filterRecoilState"
 import { useAppDispatch, useAppSelector } from "../../redux/hooks"
 import { addFilterData, removeFilterData } from "../../redux/filterStateSlice"
 import CATEGORY from "../../constants/category"
