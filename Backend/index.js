@@ -36,6 +36,15 @@ app.get('/latest-products', (request, response) => {
     })
 })
 
+// Products whose price is greater than 150 considered as best seller
+
+app.get('/best-seller', (request, response) => {
+    ProductModel.find().where('Product_Price').gt(150).limit(4)
+    .then((result)=>{
+        response.json(result)
+    })
+})
+
 app.get('/product/:productId', (request, response)=>{
     let { productId } = request.params;
     ProductModel.find({_id: productId})

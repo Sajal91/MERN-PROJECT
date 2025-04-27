@@ -1,12 +1,11 @@
-import { FC, useEffect, useState } from "react"
+import { FC, use, useEffect, useState } from "react"
 import Card from "../Card/Card"
 import Filter from "./Filter"
 import fetchData from "../../utilities/fetchData"
 import ProductDataInterface from "../../interfaces/productDataInterface"
 import filterArr from "../../utilities/filterArrayData"
-import { useRecoilValue } from "recoil"
-import { filterRecoilState } from "../../recoil/filterRecoilState"
-
+import { useAppSelector } from "../../redux/hooks"
+import CATEGORY from "../../constants/category"
 
 const Collection: FC = () => {
 
@@ -14,7 +13,7 @@ const Collection: FC = () => {
     const [filteredCollections, setFilterCollections] = useState<ProductDataInterface[]>([]);
     const [isDataLoaded, setIsDataLoaded] = useState<boolean>(false);
     const [isServerError, setIsServerError] = useState<boolean>(true);
-    const filterCategories = useRecoilValue(filterRecoilState);
+    const filterCategories = useAppSelector(state => state.filterCategory.value);
 
     useEffect(() => {
         fetchData.getCollections()
@@ -36,7 +35,7 @@ const Collection: FC = () => {
     const checkFilterCategories = () => {
         setFilterCollections([])
         if(filterCategories.length > 0) {
-            filterCategories.map((category) => {
+            filterCategories.map((category: CATEGORY) => {
                 let filteredData = collectionData?.filter(element => category === element.Product_Category)
                 setFilterCollections(prevItems => [...prevItems, ...filteredData])
             })

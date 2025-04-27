@@ -7,13 +7,15 @@ import Login from './components/Login/Login'
 import Navbar from './components/Navbar/Navbar'
 import Collection from './components/Collections/Collection'
 import { FC } from 'react'
+import TempNav from './components/Navbar/TempNav'
 
 
 const App: FC = () => {
 
   return (
     <>
-        <Navbar />
+        {/* <Navbar /> */}
+        <TempNav/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

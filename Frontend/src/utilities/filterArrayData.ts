@@ -3,7 +3,7 @@ import CATEGORY from "../constants/category"
 interface FilterArrayInterface {
     id: number,
     Filter_Name: string,
-    Filter_Type: string[]
+    Filter_Type: CATEGORY[]
 }
 
 const filterArr: FilterArrayInterface[] = [
