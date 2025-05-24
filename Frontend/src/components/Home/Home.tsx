@@ -1,7 +1,5 @@
-import bannerImg from '../../assets/Images/banner-img.jpg'
 import Card from '../Card/Card';
 import Policies from './Policies';
-import Footer from '../Footer/Footer';
 import { FC, useEffect, useState } from 'react';
 import fetchData from '../../utilities/fetchData';
 import ProductDataInterface from '../../interfaces/productDataInterface';
@@ -30,15 +28,16 @@ const Home: FC = () => {
     }, [])
 
     return (
-        <div className="absolute left-0 top-0 pt-24 w-full h-screen overflow-scroll scroll-smooth flex justify-center">
+        <div className="left-0 top-0 pt-24 w-full h-screen overflow-scroll scroll-smooth flex justify-center">
 
-            <div className="absolute left-1/2 -translate-x-1/2 w-[85vw]">
-                <div className="banner-section w-full h-full flex justify-center border-1 border-black border-solid max-md:flex-col max-md:justify-between">
+            <div className="mx-auto max-w-7xl w-full px-2 sm:px-6 lg:px-8">
+                {/* <div className="banner-section w-full h-full flex justify-center border-1 border-black border-solid max-md:flex-col max-md:justify-between">
                     <div className="text-area w-1/2 flex justify-center items-center text-4xl max-md:w-full max-md:h-40">Latest Arrivals</div>
                     <div className="image-area w-1/2 max-md:w-full h-full">
                         <img src={bannerImg} className='w-full h-full' alt="" />
                     </div>
-                </div>
+                </div> */}
+
 
                 <div className="collections-section w-full mt-16">
                     <h1 className='text-center text-4xl font-semibold'>Latest Collections</h1>
@@ -72,9 +71,9 @@ const Home: FC = () => {
                     <Policies />
                 </div>
 
-                <div className='footer-section w-full items-center justify-center mt-28'>
+                {/* <div className='footer-section w-full items-center justify-center mt-28'>
                     <Footer />
-                </div>
+                </div> */}
 
             </div>
         </div>

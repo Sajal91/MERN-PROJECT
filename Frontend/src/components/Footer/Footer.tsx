@@ -2,7 +2,7 @@ import { FC } from 'react'
 
 const Footer: FC = () => {
   return (
-    <div>
+    <div className=''>
       <h1 className='text-center text-4xl font-semibold  mt-10 mb-5'>Subscribe now & get 20% off</h1>
       <p className='text-center mb-5'> Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
       <div className='flex text-center mb-5 h-10 justify-center'>

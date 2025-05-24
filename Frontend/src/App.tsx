@@ -8,6 +8,8 @@ import Navbar from './components/Navbar/Navbar'
 import Collection from './components/Collections/Collection'
 import { FC } from 'react'
 import TempNav from './components/Navbar/TempNav'
+import Footer from './components/Footer/Footer'
+import TempFooter from './components/Footer/TempFooter'
 
 
 const App: FC = () => {
@@ -23,6 +25,7 @@ const App: FC = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/product/:productId" element={<Product />} />
         </Routes>
+        <TempFooter/>
     </>
   )
 }
