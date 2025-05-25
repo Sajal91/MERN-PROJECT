@@ -53,10 +53,10 @@ const Product: FC = () => {
             ) : error ? (
                 <div className="text-center text-red-500 text-lg">{error}</div>
             ) : (
-                <div className="mx-auto max-w-7xl w-full px-2 sm:px-6 lg:px-8 flex max-lg:pt-24 justify-center min-h-[500px]">
-                    <div className="flex w-full justify-between">
-                        <div className="flex flex-col-reverse lg:flex-row gap-6 lg:h-full max-lg:h-[600px] lg:w-[545px] max-lg:w-[400px]">
-                            <div className="flex flex-row lg:flex-col justify-between gap-4 overflow-x-scroll lg:h-full">
+                <div className="mx-auto max-w-7xl w-full px-2 sm:px-6 lg:px-8 flex  justify-center ">
+                    <div className="flex w-full justify-between h-[600px]">
+                        <div className="flex flex-col-reverse lg:flex-row gap-6  lg:w-[545px] max-lg:w-[400px]">
+                            <div className="flex flex-row lg:flex-col justify-between gap-4 overflow-x-scroll ">
                                 {productData?.Product_Image?.length ? (
                                     productData.Product_Image.map((image, index) => (
                                         <div key={index} className="border-1 border-white w-24 h-28">

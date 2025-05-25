@@ -41,7 +41,7 @@ const TempFooter: FC = () => {
     //   <hr className='mt-5' />
     //   <div className='text-center mb-2 mt-2'> <p>Copyright 2024@ Rohan.dev & Sajal.dev - All Right Reserved.</p> </div>
     // </div>
-    <div className="w-screen h-[200px] bg-green-400"></div>
+    <footer className="w-full h-[200px] bg-green-400"></footer>
   )
 }
 

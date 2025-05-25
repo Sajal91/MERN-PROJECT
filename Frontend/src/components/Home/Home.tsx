@@ -28,7 +28,7 @@ const Home: FC = () => {
     }, [])
 
     return (
-        <div className="left-0 top-0 pt-24 w-full h-screen overflow-scroll scroll-smooth flex justify-center">
+        <div className="pt-24 w-full scroll-smooth flex justify-center">
 
             <div className="mx-auto max-w-7xl w-full px-2 sm:px-6 lg:px-8">
                 {/* <div className="banner-section w-full h-full flex justify-center border-1 border-black border-solid max-md:flex-col max-md:justify-between">

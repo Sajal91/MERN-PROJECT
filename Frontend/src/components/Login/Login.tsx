@@ -4,9 +4,9 @@ import Footer from "../Footer/Footer"
 const Login: FC = () => {
     return (
         <>
-            <div className="absolute left-0 top-0 pt-24 w-full h-screen overflow-scroll scroll-smooth flex justify-center">
+            <div className="pt-24 w-full scroll-smooth flex justify-center">
 
-                <div className="absolute left-1/2 -translate-x-1/2 w-[85vw]">
+                <div className="mx-auto max-w-7xl w-full px-2 sm:px-6 lg:px-8">
                 <h1 className='text-center text-5xl  uppercase mt-20'>
                  Login <span className="inline-block scale-x-300">-</span>
                 </h1>

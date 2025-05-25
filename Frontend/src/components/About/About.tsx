@@ -5,7 +5,7 @@ import Footer from "../Footer/Footer";
 const About: FC = () => {
     return (
         <>
-            <div className="top-0 left-0 pt-24 w-full h-screen overflow-scroll scroll-smooth">
+            <div className="pt-24 w-full scroll-smooth">
                 <div className="mx-auto max-w-7xl w-full px-2 sm:px-6 lg:px-8 flex flex-col items-center">
                     <div className="w-full text-center">
                         <h1 className="text-2xl font-bold">About Us</h1>
