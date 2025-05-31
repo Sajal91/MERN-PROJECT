@@ -46,7 +46,7 @@ const Collection: FC = () => {
 
     return (
         <>
-            <div className="left-0 top-0 pt-24 w-full h-screen overflow-scroll scroll-smooth flex justify-center">
+            <div className="left-0 top-0 pt-24 w-full scroll-smooth flex justify-center">
                 <div className="mx-auto max-w-7xl w-full px-2 sm:px-6 lg:px-8 flex justify-between">
                     <div className="filter-section w-[300px]">
                         <h1 className="text-4xl">Filters</h1>
