@@ -18,10 +18,13 @@ export const filterStateSlice = createSlice({
     },
     removeFilterData: (state, action: PayloadAction<CATEGORY>) => {
       state.value = state.value.filter(category => category !== action.payload)
+    },
+    clearAllFilters: (state) => {
+      state.value = [];
     }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { addFilterData, removeFilterData } = filterStateSlice.actions
+export const { addFilterData, removeFilterData, clearAllFilters } = filterStateSlice.actions
 export default filterStateSlice.reducer
