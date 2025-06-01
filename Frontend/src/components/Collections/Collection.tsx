@@ -72,19 +72,6 @@ const Collection: FC = () => {
     }
 
     return (
-<<<<<<< HEAD
-        <>
-            <div className="left-0 top-0 pt-24 w-full  scroll-smooth flex justify-center">
-                <div className="mx-auto max-w-7xl w-full px-2 sm:px-6 lg:px-8 flex justify-between">
-                    <div className="filter-section w-[300px]">
-                        <h1 className="text-4xl">Filters</h1>
-                        <div className="filters-box">
-                            {
-                                filterArr.map((element, index) => {
-                                    return <Filter Filter_Name={element.Filter_Name} Filter_Type={element.Filter_Type} id={element.id} key={index} />
-                                })
-                            }
-=======
         <div className="min-h-screen bg-gray-50 pt-16 md:pt-20 lg:pt-24">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col lg:flex-row gap-4 lg:gap-8">
@@ -118,7 +105,6 @@ const Collection: FC = () => {
                                     />
                                 ))}
                             </div>
->>>>>>> 7ee1c473345c02975897981fea25d2df7e76504b
                         </div>
                     </div>
 
