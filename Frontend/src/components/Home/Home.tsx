@@ -41,7 +41,7 @@ const Home: FC = () => {
                 </div>
             </div>
 
-                <Corrousel />
+                
                 <div className="collections-section w-full mt-16">
                     <h1 className='text-center text-4xl font-semibold'>Latest Collections</h1>
                     <p className='text-center text-sm tracking-wide mt-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. In magnam dolore fugiat aperiam</p>
@@ -57,7 +57,8 @@ const Home: FC = () => {
                 </div>
 
                 {/* Latest Collections Section */}
-                <div className="mb-24">
+                <Corrousel /> 
+                <div className="mb-24 mt-24">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-bold mb-4">Latest Collections</h2>
                         <p className="text-gray-600 max-w-2xl mx-auto">

@@ -22,7 +22,7 @@ const Carousel: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-xl">
+    <div className="relative w-full max-w-7xl mx-auto overflow-hidden rounded-2xl shadow-xl">
       <div className="relative h-[400px] bg-black">
         <AnimatePresence mode="wait">
           <motion.img
