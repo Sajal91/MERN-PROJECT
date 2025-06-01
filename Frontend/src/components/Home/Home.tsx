@@ -3,11 +3,7 @@ import Policies from './Policies';
 import { FC, useEffect, useState } from 'react';
 import fetchData from '../../utilities/fetchData';
 import ProductDataInterface from '../../interfaces/productDataInterface';
-<<<<<<< HEAD
 import Corrousel from './Carousel';
-=======
-import { FaArrowRight } from 'react-icons/fa';
->>>>>>> 7ee1c473345c02975897981fea25d2df7e76504b
 
 const Home: FC = () => {
     const [latestCollections, setLatestCollections] = useState<ProductDataInterface[]>()
