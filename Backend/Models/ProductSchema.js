@@ -10,11 +10,17 @@ const ProductSchema = new Schema({
         type: Number,
         required: true
     },
-    Product_Image: [{
+    Product_Image: [String],
+    Product_Description: {
         type: String,
         required: true
-    }],
-    Product_Description: {
+    },
+    Product_Available_Size: [String],
+    Product_Category: {
+        type: String,
+        required: true
+    },
+    Product_SubCategory: {
         type: String,
         required: true
     }

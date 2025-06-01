@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors")
-require("dotenv").config();
+require("dotenv").config({ path: '.env' });
 const app = express();
 const port = process.env.PORT;
 const ProductModel = require("./Models/ProductSchema");
@@ -33,6 +33,15 @@ app.get('/latest-products', (request, response) => {
     ProductModel.find().sort({ createdAt: -1 }).limit(4)
     .then((result)=>{
         response.json(result);
+    })
+})
+
+// Products whose price is greater than 150 considered as best seller
+
+app.get('/best-seller', (request, response) => {
+    ProductModel.find().where('Product_Price').gt(150).limit(4)
+    .then((result)=>{
+        response.json(result)
     })
 })
 
