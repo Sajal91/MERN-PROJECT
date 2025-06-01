@@ -3,6 +3,7 @@ import Policies from './Policies';
 import { FC, useEffect, useState } from 'react';
 import fetchData from '../../utilities/fetchData';
 import ProductDataInterface from '../../interfaces/productDataInterface';
+import Corrousel from './Carousel';
 
 const Home: FC = () => {
     const [latestCollections, setLatestCollections] = useState<ProductDataInterface[]>()
@@ -29,6 +30,7 @@ const Home: FC = () => {
 
     return (
         <div className="pt-24 w-full scroll-smooth flex justify-center">
+           
 
             <div className="mx-auto max-w-7xl w-full px-2 sm:px-6 lg:px-8">
                 {/* <div className="banner-section w-full h-full flex justify-center border-1 border-black border-solid max-md:flex-col max-md:justify-between">
@@ -38,7 +40,7 @@ const Home: FC = () => {
                     </div>
                 </div> */}
 
-
+                <Corrousel />
                 <div className="collections-section w-full mt-16">
                     <h1 className='text-center text-4xl font-semibold'>Latest Collections</h1>
                     <p className='text-center text-sm tracking-wide mt-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. In magnam dolore fugiat aperiam</p>
