@@ -13,6 +13,8 @@
     "@material-tailwind/react": "^2.1.10",
     "@reduxjs/toolkit": "^2.7.0",
     "@tailwindcss/vite": "^4.0.8",
+    "framer-motion": "^12.12.2",
+    "lucide-react": "^0.511.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
@@ -25,7 +27,7 @@
     "@eslint/js": "^9.21.0",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
-    "@vitejs/plugin-react": "^4.3.4",
+    "@vitejs/plugin-react": "^4.5.0",
     "autoprefixer": "^10.4.21",
     "eslint": "^9.21.0",
     "eslint-plugin-react": "^7.37.4",
@@ -36,6 +38,6 @@
     "tailwindcss": "^4.1.7",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
-    "vite": "^6.2.0"
+    "vite": "^6.3.5"
   }
 }
