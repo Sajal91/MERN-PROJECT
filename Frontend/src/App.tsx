@@ -7,22 +7,20 @@ import Login from './components/Login/Login'
 import Collection from './components/Collections/Collection'
 import { FC } from 'react'
 import Footer from './components/Footer/Footer'
-import Navbar from './components/Navbar/Navbar'
+import Navbar from './components/Navbar/NavBar'
 
 const App: FC = () => {
-
   return (
     <>
-        {/* <Navbar /> */}
-        <Navbar/>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/collection" element={<Collection />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/product/:productId" element={<Product />} />
-        </Routes>
-        <Footer/>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/collection" element={<Collection />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/product/:productId" element={<Product />} />
+      </Routes>
+      <Footer />
     </>
   )
 }

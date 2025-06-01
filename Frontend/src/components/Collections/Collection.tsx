@@ -4,10 +4,8 @@ import Filter from "./Filter"
 import fetchData from "../../utilities/fetchData"
 import ProductDataInterface from "../../interfaces/productDataInterface"
 import filterArr from "../../utilities/filterArrayData"
-import { useAppSelector, useAppDispatch } from "../../redux/hooks"
-import CATEGORY from "../../constants/category"
+import { useAppSelector } from "../../redux/hooks"
 import { FiFilter, FiX } from "react-icons/fi"
-import { clearAllFilters } from "../../redux/filterStateSlice"
 
 const Collection: FC = () => {
     const [collectionData, setCollectionData] = useState<ProductDataInterface[]>([]);
@@ -17,7 +15,6 @@ const Collection: FC = () => {
     const [isFilterOpen, setIsFilterOpen] = useState<boolean>(false);
     const [sortBy, setSortBy] = useState<string>("featured");
     const filterCategories = useAppSelector(state => state.filterCategory.value);
-    const dispatch = useAppDispatch();
 
     useEffect(() => {
         fetchData.getCollections()
@@ -64,11 +61,6 @@ const Collection: FC = () => {
         }
 
         setFilterCollections(filtered);
-    }
-
-    const handleClearAllFilters = () => {
-        dispatch(clearAllFilters());
-        setFilterCollections(collectionData);
     }
 
     return (
