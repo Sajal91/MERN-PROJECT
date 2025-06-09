@@ -19,7 +19,7 @@ const App: FC = () => {
         <Route path="/collection" element={<Collection />} />
         <Route path="/login" element={<Login />} />
         <Route path="/product/:productId" element={<Product />} />
-      </Routes>
+      </Routes> 
       <Footer />
     </>
   )

@@ -1,20 +1,20 @@
 const getCollections = async() => {
-    let response = await fetch("http://localhost:8080/products")
+    let response = await fetch("https://mern-project-1-j6ok.onrender.com/products")
     return response.json();
 }
 
 const getLatestCollections = async() => {
-    let response = await fetch('http://localhost:8080/latest-products')
+    let response = await fetch('https://mern-project-1-j6ok.onrender.com/latest-products')
     return response.json();
 }
 
 const getBestSellerProducts = async() => {
-    let response = await fetch('http://localhost:8080/best-seller')
+    let response = await fetch('https://mern-project-1-j6ok.onrender.com/best-seller')
     return response.json();
 }
 
 const getProduct = async(id: string) => {
-    let response = await fetch(`http://localhost:8080/product/${id}`)
+    let response = await fetch(`https://mern-project-1-j6ok.onrender.com/product/${id}`)
     return response.json();
 }
 
