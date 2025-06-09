@@ -1,16 +1,14 @@
 import { FC } from "react"
-import Footer from "../Footer/Footer"
 
 const Login: FC = () => {
     return (
-        <>
-            <div className="pt-24 w-full scroll-smooth flex justify-center">
+        <div className="pt-24 w-full scroll-smooth flex justify-center">
 
-                <div className="mx-auto max-w-7xl w-full px-2 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl w-full px-2 sm:px-6 lg:px-8">
                 <h1 className='text-center text-5xl  uppercase mt-20'>
-                 Login <span className="inline-block scale-x-300">-</span>
+                    Login <span className="inline-block scale-x-300">-</span>
                 </h1>
-                <div className="mt-10 bg-white p-6   w-[450px] m-auto">
+                <div className="mt-10 bg-white p-6 w-[450px] m-auto">
                     <form className="flex flex-col gap-4 ">
                         <input
                             type="text"
@@ -34,11 +32,8 @@ const Login: FC = () => {
                     <button> Forgot your password? </button>
                     <button className="ml-32"> Create account </button>
                 </div>
-                <div className='footer-section w-full items-center justify-center mt-28'>
-                    <Footer />
-                </div>
-                </div></div>
-        </>
+            </div>
+        </div>
     )
 }
 
